@@ -184,3 +184,8 @@
 {
 	transform: scaleX(1);
 }
+
+/* remove scrollbar for chrome */
+::-webkit-scrollbar {
+  display: none;
+}
