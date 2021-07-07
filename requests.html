@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Requests</title>
+    <link rel="shortcut icon" href="img/favicon 400x400.png">
+    <link rel="stylesheet" href="css/presets.css">
+    <link rel="stylesheet" href="css/requests.css">
+    <script src="https://kit.fontawesome.com/931436d7f9.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="nav">
+        <div class="welcome">
+          <h2><button id="signout" title="Log Out"><i class="fas fa-sign-out-alt"></i></button></h2>
+        </div>
+        <div class="navButtons coach">
+          <button id="0">Dashboard</button>
+          <button id="1" class="current">Requests</button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="requests">
+          <div class="header">
+            <h2>Client Requests</h2>
+            <p>View Profiles and provide feedback</p>
+          </div>
+          <div class="list">
+            <!-- List generated from database -->
+          </div>
+        </div>
+        <div class="details">
+
+          <div class="info_nav">
+            <button id="info_container" class="btn btn_tab current">Information</button>
+            <button id="photo_uploads" class="btn btn_tab">Profile uploads</button>
+            <button id="review" class="btn btn_tab">Review</button>
+          </div>
+          <div class="info_container tab">
+
+          </div>
+          <div class="photo_uploads tab hide">
+
+          </div>
+          <div class="review tab hide">
+            <div class="nothing_to_show">
+              <h2>Select a client</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/requests.js"></script>
+    <script type="text/javascript" src="js/preset.js"></script>
+  </body>
+</html>

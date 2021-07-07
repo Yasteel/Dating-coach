@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="shortcut icon" href="img/favicon 400x400.png">
+    <link rel="stylesheet" href="css/loginStyles.css">
+    <link rel="stylesheet" href="css/presets.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="card">
+        <div class="card_desc">
+          <h2>Online Dating Coach</h2>
+          <p class="description">Having trouble meeting 'The One' or can't seem to hold a relationship? Create your free profile here and have professional dating coaches review and give feedback on your profile.</p>
+          <p class="description">Lets Get Started.</p>
+        </div>
+        <div class="card_login">
+          <input type="text" class="txt_username" placeholder="Enter Username">
+          <select class="user_type">
+            <option value="null">Select Account Type</option>
+            <option value="1">Dater</option>
+            <option value="2">Dating Coach</option>
+          </select>
+          <button class="btn_login">Login</button>
+        </div>
+      </div>
+      <div class="dialog_box_wrapper hide">
+        <div class="dialog_box">
+          <p>No account with that username was found, would you like to create one?</p>
+          <button class="btn yes">Yes</button>
+          <button class="btn no">No</button>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

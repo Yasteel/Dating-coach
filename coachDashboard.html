@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="img/favicon 400x400.png">
+    <link rel="stylesheet" href="css/presets.css">
+    <link rel="stylesheet" href="css/coachDashboard.css">
+    <script src="https://kit.fontawesome.com/931436d7f9.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="nav">
+        <div class="welcome">
+          <h2><button id="signout" title="Log Out"><i class="fas fa-sign-out-alt"></i></button></h2>
+        </div>
+        <div class="navButtons coach">
+          <button id="0"  class="current">Dashboard</button>
+          <button id="1">Requests</button>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="info">
+          <div class="profile_picture">
+            <img id="profile_picture" src="img/emptyProfile.png" alt="profile">
+            <input id="fileUpload" type="file" class="file_profile_pic">
+            <button class="btn changePhoto">Change Photo</button>
+            <button class="btn edit_open"><i class="fas fa-pencil-alt"></i> Edit Profile</button>
+          </div>
+          <div id="profile_info">
+            <!-- Generated Elements Here -->
+          </div>
+        </div>
+        <div class="edits hide">
+          <div class="header">
+            <h2>Edit your Profile</h2>
+          </div>
+          <div>
+            <h4 class="highlight">Name</h4>
+            <input id="name" type="text" placeholder="Enter Your Name">
+            <h4 class="highlight">Surname</h4>
+            <input id="surname" type="text" placeholder="Enter Your Surname">
+            <h4 class="highlight">Age</h4>
+            <input id="age" type="text" placeholder="Enter Your Age">
+            <h4 class="highlight">Description</h4>
+            <textarea id="description" maxlength="150" placeholder="Enter Somthing about yourself"></textarea>
+            <p class="char_count">150 characters left</p>
+          </div>
+          <div>
+            <button class="btn cancel">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <div class="save hide">
+        <button class="btn btn_save">Save Profile</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/coachDashboard.js"></script>
+    <script type="text/javascript" src="js/preset.js"></script>
+  </body>
+</html>

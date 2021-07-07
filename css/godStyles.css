@@ -1,0 +1,242 @@
+.container
+{
+  width: 100vw;
+  height: calc(100vh -50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.content_wrapper
+{
+  width: 800px;
+}
+
+.main_info
+{
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--base);
+}
+
+.main_info input
+{
+  width: 100px;
+  height: 40px;
+  font-size: 1em;
+  outline: none;
+  border: none;
+  background: none;
+  color: var(--l_white);
+}
+
+.main_info input:disabled
+{
+  color: var(--d_white);
+}
+
+.main_info input:focus
+{
+  border: 1px solid var(--l_white);
+}
+
+.header
+{
+  height: 50px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.15);
+  color: var(--text);
+}
+
+.btn_save_user_info,
+.main_info button
+{
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: var(--base);
+  color: var(--l_white);
+  transition: 300ms ease-in;
+}
+
+.main_info button
+{
+  border: 1px solid var(--l_white);
+  transition: 200ms ease-in-out;
+}
+
+.main_info button:hover
+{
+  transform: scaleX(1.05);
+}
+
+.btn_save_user_info:hover,
+.btn_save_user_info:focus
+{
+  background: var(--text);
+}
+
+.body
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: rgba(255,255,255,0.15);
+}
+
+.body textarea
+{
+  width: 100%;
+  height: 100px;
+  padding: 15px;
+  margin: 10px 15px;
+  resize: none;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid var(--l_white);
+  background: none;
+  color: var(--l_white);
+}
+
+.body input
+{
+  width: 200px;
+  height: 40px;
+  margin: 10px 15px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border: 1px solid var(--l_white);
+  border-radius: 10px;
+  background: none;
+  color: var(--l_white);
+  font-size: 1em;
+}
+
+.body input:focus,
+.body textarea:focus
+{
+  border: 2px solid var(--base);
+}
+
+.review_list
+{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+table
+{
+  border-collapse: collapse;
+  margin-top: 15px;
+  color: var(--l_white);
+  transition: 200ms ease-in-out;
+}
+
+table:nth-child(odd)
+{
+  background: rgba(255,255,255,0.2);
+}
+
+table:hover
+{
+  background: rgba(255,255,255,0.2);
+
+}
+
+th,
+td
+{
+  width: 150px;
+  height: 50px;
+  padding: 0 15px;
+  text-align: left;
+}
+
+th:nth-child(2),
+td:nth-child(2)
+{
+  width: 350px;
+}
+
+th
+{
+  background: var(--base);
+  color: var(--l_white);
+}
+
+td
+{
+  height: 100px;
+}
+
+td textarea
+{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid var(--l_white);
+  background: none;
+  outline: none;
+  color: inherit;
+}
+
+.saveList
+{
+  width: 100vw;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.saveList.hide
+{
+  display: none;
+}
+
+.btn_save_list
+{
+  width: 125px;
+  height: 40px;
+  margin-right: 15px;
+  border-radius: 10px;
+  background: none;
+  outline: none;
+  border: 1px solid var(--base);
+  color: var(--l_white);
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+
+.btn_save_list:hover,
+.btn_save_list:focus
+{
+  background: var(--base);
+}
+
+
+.no_records_found
+{
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: var(--base);
+}

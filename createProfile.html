@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create Profile</title>
+    <link rel="shortcut icon" href="img/favicon 400x400.png">
+    <link rel="stylesheet" href="css/presets.css">
+    <link rel="stylesheet" href="css/createProfile.css">
+    <script src="https://kit.fontawesome.com/931436d7f9.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="nav">
+        <div class="welcome"><h2>Create Your Profile</h2></div>
+      </div>
+      <div class="profile">
+        <div class="info">
+          <div>
+            <h4>User name</h4>
+            <input type="text" id="username" disabled>
+          </div>
+          <div>
+            <h4>Name</h4>
+            <input type="text" id="name" placeholder="Enter Your Name">
+          </div>
+          <div>
+            <h4>Surname</h4>
+            <input type="text" id="surname" placeholder="Enter Your Surname">
+          </div>
+          <div>
+            <h4>Age</h4>
+            <input type="text" id="age" placeholder="Enter Your Age">
+          </div>
+          <div>
+            <h4>Gender</h4>
+            <select class="gender" id="gender">
+              <option value="null">Select</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div>
+            <h4>Description</h4>
+            <textarea  class="description" id="description" placeholder="Enter Somthing about yourself"></textarea>
+            <p class="charCount"><span class="count">150</span> characters left</p>
+          </div>
+          <div>
+            <input type="file" class="file" id="fileUpload" name="fileUpload">
+            <button class="btn upload_btn">Upload Profile Picture</button>
+          </div>
+        </div>
+        <div class="edits hide">
+          <div>
+            <h4>Likes</h4>
+            <input type="text" class="likes" placeholder="Enter Something you like">
+            <input type="text" class="likes" placeholder="Enter Something you like">
+            <input type="text" class="likes" placeholder="Enter Something you like">
+            <input type="text" class="likes" placeholder="Enter Something you like">
+            <input type="text" class="likes" placeholder="Enter Something you like">
+          </div>
+          <div>
+            <h4>Dislikes</h4>
+            <input type="text" class="dislikes" placeholder="Enter Something you do not like">
+            <input type="text" class="dislikes" placeholder="Enter Something you do not like">
+            <input type="text" class="dislikes" placeholder="Enter Something you do not like">
+            <input type="text" class="dislikes" placeholder="Enter Something you do not like">
+            <input type="text" class="dislikes" placeholder="Enter Something you do not like">
+          </div>
+          <div>
+            <h4>My Qualities</h4>
+            <input type="text" class="qualities" placeholder="Enter a good quality about yourself">
+            <input type="text" class="qualities" placeholder="Enter a good quality about yourself">
+            <input type="text" class="qualities" placeholder="Enter a good quality about yourself">
+            <input type="text" class="qualities" placeholder="Enter a good quality about yourself">
+            <input type="text" class="qualities" placeholder="Enter a good quality about yourself">
+          </div>
+          <div>
+            <h4>Partner Qualities</h4>
+            <input type="text" class="partner" placeholder="Enter something you look for in a partner">
+            <input type="text" class="partner" placeholder="Enter something you look for in a partner">
+            <input type="text" class="partner" placeholder="Enter something you look for in a partner">
+            <input type="text" class="partner" placeholder="Enter something you look for in a partner">
+            <input type="text" class="partner" placeholder="Enter something you look for in a partner">
+          </div>
+        </div>
+      </div>
+      <div class="save">
+        <button class="btn btn_save">Save Profile</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/createProfile.js"></script>
+    <script type="text/javascript" src="js/preset.js"></script>
+  </body>
+</html>

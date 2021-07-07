@@ -1,0 +1,133 @@
+.wrapper
+{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+  font-family: helvetica;
+}
+
+.card
+{
+	width: 400px;
+	height: 65%;
+	padding: 20px;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 60% 40%;
+
+  background: rgba(255,255,255,0.15);
+  box-shadow: 5px 5px 8px rgba(255,255,255,0.2);
+  border-radius: 10px;
+}
+
+.card > div
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card_desc
+{
+  justify-content: space-between;
+}
+
+.card_desc h2
+{
+  font-size: 2.5em;
+  color: var(--text);
+}
+
+.card_desc p
+{
+  font-size: 1.2rem;
+  color: var(--d_white);
+  letter-spacing: 1px;
+}
+
+.card_login
+{
+  justify-content: flex-end;
+}
+
+.card_login > *
+{
+	width: 100%;
+	height: 35px;
+	margin: 10px 0;
+
+  background: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--l_white);
+	border: 1px solid var(--base);
+  transition: 300ms ease-in;
+}
+
+.card_login input:focus,
+.card_login select:focus
+{
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.card_login select option
+{
+	background: rgba(255,255,255,0.3);
+	color: black;
+}
+
+.card_login button:hover,
+.card_login button:focus,
+.btn:hover,
+.btn:focus
+{
+	cursor: pointer;
+  background: var(--base);
+}
+
+.card.hide,
+.dialog_box_wrapper.hide
+{
+	display: none;
+}
+
+.dialog_box_wrapper
+{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dialog_box
+{
+	width: 400px;
+	height: 150px;
+	padding: 15px;
+	background: rgba(255,255,255,0.15);
+	box-shadow: 5px 5px 8px rgba(255,255,255,0.2);
+	border-radius: 10px;
+	color: var(--l_white);
+}
+
+.btn
+{
+	width: 49%;
+	height: 35px;
+	margin-top: 35px;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+	background: none;
+	border: 1px solid var(--base);
+	color: var(--l_white);
+	transition: 300ms ease-in;
+}

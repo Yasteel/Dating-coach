@@ -1,0 +1,157 @@
+.profile
+{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  color: var(--l_white);
+}
+
+.profile > div
+{
+  width: 400px;
+  height: 800px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.15);
+  z-index: 1;
+}
+
+#profile_info p
+{
+  margin: 20px 0;
+}
+
+.highlight
+{
+  color: var(--text);
+  font-weight: 600;
+}
+
+.profile_picture
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.profile_picture img
+{
+  width: 100%;
+  height: 100%;
+}
+
+.photos img
+{
+  width: 100%;
+  height: 100%;
+}
+
+input[type="file"]
+{
+  display: none;
+}
+
+.btn
+{
+  width: 100%;
+  height: 40px;
+  background: none;
+  outline: none;
+  border: 1px solid var(--base);
+  border-radius: 10px;
+  color: var(--l_white);
+  cursor: pointer;
+  transition: 600ms ease-in-out;
+}
+
+.btn:hover
+{
+  background: var(--base);
+}
+
+
+.profile .edits
+{
+  /* width: 30%; */
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  display: none;
+}
+
+.profile .edits div
+{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  padding: 15px;
+  z-index: -1;
+}
+
+.profile .edits div h4
+{
+  color: var(--text);
+}
+
+.profile :is(textarea)
+{
+  width: 100%;
+  height: 115px;
+  padding: 10px;
+  background: none;
+  outline: none;
+  border: 1px solid var(--l_white);
+  color: var(--l_white);
+}
+
+.profile :is(.char_count)
+{
+  text-align: right;
+}
+
+.profile :is(input[type="text"])
+{
+  width: 100%;
+  height: 35px;
+  margin: 5px 0;
+  padding: 10px;
+  background: none;
+  outline: none;
+  border: none;
+  border-left: 2px solid var(--l_white);
+  color: white;
+}
+
+.profile :is(input[type="text"]:focus)
+{
+  border: 2px solid var(--base);
+}
+
+.profile .gallery
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery .header
+{
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.gallery .photos
+{
+  width: 100%;
+  height: 75%;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  grid-gap: 10px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
