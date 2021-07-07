@@ -165,5 +165,45 @@ async function saveFile(username, userType)
 
   })
   .catch(error => {console.log("Error: ", error);});
+}
 
+function show_alert(message, messageType)
+{
+  var div =
+  `
+  <div class="alert_container">
+    <div class="alert">`;
+
+  if(messageType == 0)
+  {
+    div += `<div><i class="far fa-check-circle"></i></div>`;
+  }
+  else if(messageType == 1)
+  {
+    div += `<div><i class="far fa-times-circle"></i></div>`;
+  }
+  else
+  {
+    div += `<div><i class="fas fa-exclamation-circle"></i></div>`;
+  }
+    div +=
+    `<div class="message">
+        <p>${message}</p>
+      </div>
+      <div class="progress"></div>
+    </div>
+  </div>
+  `;
+
+  $('.wrapper').append(div);
+
+  setTimeout(function()
+  {
+    $('.alert').addClass('show');
+  }, 100);
+
+  setTimeout(function()
+  {
+    $('.alert_container').remove();
+  }, 2000);
 }

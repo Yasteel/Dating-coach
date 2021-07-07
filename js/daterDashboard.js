@@ -1,4 +1,4 @@
-var username, userType, userData;
+var username, userType
 
 $(document).ready(function()
 {
@@ -109,7 +109,7 @@ function fetchInfo()
       <p><span class="highlight">Partner Qualities: </span> ${partner_qualities}</p>
       `;
 
-      $('#profile_info').append(info);
+      $('#profile_info').html(info);
       $('#profile_picture').attr('src', `upload/${profile_picture}`);
   });
 }
