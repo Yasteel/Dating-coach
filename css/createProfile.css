@@ -95,7 +95,13 @@ textarea
   transition: 300ms ease-in-out;
 }
 
-.btn:hover
+.btn:hover,
+.btn:focus
+{
+  background: var(--base);
+}
+
+.upload_btn.selected
 {
   background: var(--base);
 }

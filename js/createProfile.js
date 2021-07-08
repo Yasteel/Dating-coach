@@ -35,75 +35,98 @@ $(document).on('click', '.btn_save', function()
   var age = $('#age').val().trim();
   var gender = $('#gender').val().trim();
   var description = $('#description').val().trim();
+  var file = document.getElementsByClassName('file')[0];
 
-  if(userType == 2)
+  //check if all inputs are valid
+  if(validInputs(name) && validInputs(surname) && validInputs(age, 'age') && validInputs(gender) && validInputs(description))
   {
-    $.post('php/index.php',
+    if(file.files.length > 0)
     {
-      operation: 'register_coach',
-      username: username,
-      name: name,
-      surname: surname,
-      age: age,
-      gender: gender,
-      description: description
-    },
-    function(data)
-    {
-      if(data == 1)
+      if(userType == 2)
       {
-        saveFile(username, userType);
-      }
-      else
-      {
-        show_alert('Something went wrong: 0');
-      }
-    });
-  }
-  else if(userType == 1)
-  {
-    var likes = getValues('likes');
-    var dislikes = getValues('dislikes');
-    var qualities = getValues('qualities');
-    var partner = getValues('partner');
-
-    if(likes.length > 0 && dislikes.length > 0 && qualities.length > 0 && partner.length > 0)
-    {
-      $.post('php/index.php',
-      {
-        operation: 'register_client',
-        username: username,
-        name: name,
-        surname: surname,
-        age: age,
-        gender: gender,
-        description: description,
-        likes: likes,
-        dislikes: dislikes,
-        qualities: qualities,
-        partner: partner
-      },
-      function(data)
-      {
-        // console.log(data);
-        if(data == 1)
+        $.post('php/index.php',
         {
-          saveFile(username, userType);
+          operation: 'register_coach',
+          username: username,
+          name: name,
+          surname: surname,
+          age: age,
+          gender: gender,
+          description: description
+        },
+        function(data)
+        {
+          if(data == 1)
+          {
+            saveFile(username, userType);
+          }
+          else
+          {
+            show_alert('Something went wrong: 0');
+          }
+        });
+      }
+      else if(userType == 1)
+      {
+        var likes = getValues('likes');
+        var dislikes = getValues('dislikes');
+        var qualities = getValues('qualities');
+        var partner = getValues('partner');
+
+        // check if there is at least one value for likes,dislikes,qualities and partner's qualities
+        if(likes.length > 0 && dislikes.length > 0 && qualities.length > 0 && partner.length > 0)
+        {
+          $.post('php/index.php',
+          {
+            operation: 'register_client',
+            username: username,
+            name: name,
+            surname: surname,
+            age: age,
+            gender: gender,
+            description: description,
+            likes: likes,
+            dislikes: dislikes,
+            qualities: qualities,
+            partner: partner
+          },
+          function(data)
+          {
+            if(data == 1)
+            {
+              saveFile(username, userType);
+            }
+            else
+            {
+              console.log(data);
+              show_alert('Something went wrong: 1');
+            }
+          });
         }
         else
         {
-          console.log(data);
-          show_alert('Something went wrong: 1');
+          show_alert('Enter in at least one value for all Categories');
         }
-      });
+      }
     }
     else
     {
-      show_alert('Enter in at least one value for all Categories');
+      show_alert('Please select a profile picture');
     }
+  }
+  else
+  {
+      show_alert('Missing Fields', 1);
   }
 });
 
+$(document).on('change', '.file', function()
+{
+  var fileName = document.getElementsByClassName('file')[0].files[0].name;
+  $('.upload_btn').html(fileName);
+  $('.upload_btn').addClass('selected');
+  $('.upload_btn').attr('title', 'change picture');
+});
 
 function getValues(field_type)
 {
@@ -206,4 +229,30 @@ function show_alert(message, messageType)
   {
     $('.alert_container').remove();
   }, 2000);
+}
+
+function validInputs(val, type)
+{
+  if(val == '')
+  {
+    return false;
+  }
+  else
+  {
+    if(type == 'age')
+    {
+      if(parseInt(val))
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    }
+    else
+    {
+      return true;
+    }
+  }
 }
