@@ -17,6 +17,7 @@ $(document).ready(function()
 
   $('.edits').css('display', 'none');
   fetchInfo();
+  check_for_jobs(username);
 });
 
 

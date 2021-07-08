@@ -146,11 +146,11 @@ function clearFields()
   });
 }
 
-function check_for_reviews(username)
+function check_for_feedback(username)
 {
   $.post('php/checkReview.php',
   {
-    operation: 'check_for_reviews',
+    operation: 'check_for_feedback',
     username: username
   },
   function(data)
@@ -162,6 +162,25 @@ function check_for_reviews(username)
     else if(data == 1)
     {
       $('button#2').html('Feedback');
+    }
+  });
+}
+function check_for_jobs(username)
+{
+  $.post('php/checkReview.php',
+  {
+    operation: 'check_for_jobs',
+    username: username
+  },
+  function(data)
+  {
+    if(data == 0)
+    {
+      $('button#1').html('Feedback <i class="fas fa-circle"></i>');
+    }
+    else if(data == 1)
+    {
+      $('button#1').html('Requests');
     }
   });
 }

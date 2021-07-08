@@ -15,7 +15,7 @@ $(document).ready(function()
   }
 
   fetchCoaches();
-  check_for_reviews(username);
+  check_for_feedback(username);
 });
 
 $(document).on('click', '.coach', function()
