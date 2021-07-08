@@ -89,6 +89,7 @@
 	width: 70px;
 	font-size: 24px;
 	transform: rotate(180deg);
+
 }
 .nav button:hover
 {
@@ -101,11 +102,15 @@
 	color: var(--text);
 }
 
-
 .nav button.current
 {
   color: var(--text);
   border-bottom: 2px solid var(--base);
+}
+
+.nav button .fas.fa-circle
+{
+	font-size: 12px;
 }
 
 

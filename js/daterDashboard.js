@@ -18,6 +18,7 @@ $(document).ready(function()
 
   fetchInfo();
   fetchGallery();
+  check_for_reviews(username);
 });
 
 $(document).on('click', '.addPhoto', function()

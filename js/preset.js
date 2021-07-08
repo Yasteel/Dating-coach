@@ -145,3 +145,23 @@ function clearFields()
     });
   });
 }
+
+function check_for_reviews(username)
+{
+  $.post('php/checkReview.php',
+  {
+    operation: 'check_for_reviews',
+    username: username
+  },
+  function(data)
+  {
+    if(data == 0)
+    {
+      $('button#2').html('Feedback <i class="fas fa-circle"></i>');
+    }
+    else if(data == 1)
+    {
+      $('button#2').html('Feedback');
+    }
+  });
+}
